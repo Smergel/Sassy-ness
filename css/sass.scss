@@ -1,0 +1,397 @@
+$color1: ivory;
+$color2: black;
+$color3: blue;
+$color4: #efefef;
+$color5: #8f8ff2;
+
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	font-family: "Helvetica";
+	background-color: $color4;
+}
+
+// Navigation -----------
+.light {
+	background-color: $color4 !important;
+}
+.deep_blue {
+	background-color: $color5 !important;
+}
+.nav {
+	width: 100vw;
+	height: 4em;
+	background-color: $color4;
+
+	.middler {
+		width: 1040px;
+		height: 100%;
+		margin: 0 auto;
+		background-color: $color4;
+	
+		.brand {
+			float: left;
+			font-size: 2em;
+			color: $color2;
+			font-weight: 700;
+			letter-spacing: 3px;
+			background-color: $color1;
+			padding-top: .3em;
+		}
+		.links {
+			float: right;
+			font-size: 1em;
+			padding-top: 1em;
+
+			ul {
+				list-style-type: none;
+				background-color: $color1;
+				text-align: center;
+				padding: 0px;
+				margin: 0px;
+
+				li {
+					display: inline-block;
+					padding: .5em;
+					a {
+						color: $color2;
+						text-decoration: none;
+					}
+					a:visited {
+						color: $color2;
+					}
+				}
+				li:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}	
+@media (max-width: 1200px) and (min-width: 1040.0000000001px) {
+	.brand {
+		width: 100%;
+		float: none;
+		text-align: center;
+	}
+	.links {
+		float: none;
+		width: 100%;
+	}
+}
+@media (max-width: 1040px) and (min-width: 600.0000000001px) {
+	.nav {
+		height: auto;
+	}
+	.nav .middler {
+		width: 600px;
+	}
+	.middler .brand {
+		width: 100%;
+		float: none;
+		text-align: center;
+	}
+	.middler .links {
+		float: none;
+		width: 100%;
+	}	
+}
+@media (max-width: 600px) {
+	.nav {
+		height: auto;
+	}
+	.nav .middler {
+		width: 100%;
+	}
+	.nav .middler .brand {
+		width: 100%;
+		float: none;
+		text-align: center;
+	}
+	.nav .middler .links {
+		float: none;
+		width: 100%;
+		padding: 0px;
+		font-size: 1.5em;
+	}
+	.nav .middler .links ul {
+		width: 100%;
+	}
+	.nav .middler .links ul li {
+		width: 100%;
+		display: block;
+	}
+}
+// Full Page Banner -------------------
+.small_banner {
+	height: 30vh !important;
+	.tag_line {
+		top: 50% !important;
+	}
+}
+.banner {
+	width: 100%;
+	height: 70vh;
+	position: relative;
+	overflow: hidden;
+	background-color: $color4;
+
+	img.banner_image {
+		width: 100%;
+		height: 100%;
+		z-index: -100;
+	}
+	.tag_line {
+		color: $color1;
+		text-align: center;
+		font-size: 5em;
+		font-weight: 700;
+		text-shadow: 1px 2px $color2;
+		z-index: 100;
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translate( -50%, -50%);
+	}
+	.button_banner {
+		border: 2px solid $color1;
+		color: $color1;
+		padding: 10px 15px;
+		border-radius: 20px;
+		font-size: 1em;
+		z-index: 100;
+		position: absolute;
+		top: 83%;
+		left: 50%;
+		transform: translate( -50%, -50%);
+	}
+}
+@media (max-width: 1040px) and (min-width: 600.0000000001px) {
+	.banner .tag_line {
+		font-size: 3em;
+	}
+}
+@media (max-width: 600px) {
+	.banner .tag_line {
+		font-size: 2em;
+	}
+}
+// Icons Row -----------------------
+.icon_row {
+	width: 100%;
+	height: 50vh;
+	background-color: $color4;
+	overflow: hidden;
+
+	.middler {
+		width: 1040px;
+		margin: 0 auto;
+
+		.left, .center, .right {
+			float: left;
+			width: 33.3333333333%;
+			height: 100%;
+			margin-top: 7%;
+			text-align: center;
+
+			h4 {
+				padding: 20px 20px 60px 20px;
+				margin: 20px;
+			}
+		}
+	}
+}
+@media (max-width: 1040px) and (min-width: 600.0000000001px) {
+	.icon_row .middler {
+		width: 600px;
+	}
+}
+@media (max-width: 600px) {
+	.icon_row {
+		height: auto;
+	}
+	.icon_row .middler {
+		width: 100%;
+	}
+	.icon_row .middler .left {
+		width: 100%;
+		float: none;
+	}
+	.icon_row .middler .center {
+		width: 100%;
+		float: none;
+	}
+	.icon_row .middler .right {
+		width: 100%;
+		float: none;
+	}
+}
+// MEAT ---------------------
+.meat {
+	width: 100%;
+	height: 100vh;
+	background-color: $color4;
+
+	.middler {
+		width: 1040px;
+		height: 100%;
+		margin: 0 auto;
+
+		.text_side {
+			width: 40%;
+			height: 100%;
+			float: left;
+			position: relative;
+
+			.content_wrap {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate( -50%, -50%);
+
+				h3 {
+					font-style: italic;
+					font-size: 1.5em;
+				}
+				ul {
+					list-style-type: circle;
+					padding: 0px;
+					margin: 0px;
+
+					li {
+						padding: 10px 0px;
+						font-weight: 700;
+					}
+				}
+			}
+		}
+		.pic_side {
+			width: 60%;
+			height: 100%;
+			background-color: $color4;
+			float: right;
+			overflow: hidden;
+		}
+	}
+}
+@media (max-width: 1040px) and (min-width: 600.000000001px){
+	.meat .middler {
+		width: 600px;
+	}
+	.meat .middler .text_side {
+		width: 100%;
+		height: 60%;
+		float: none;
+		text-align: center;
+	}
+	.meat .middler .text_side ul li {
+		text-align: left;
+	}
+	.meat .middler .pic_side {
+		width: 100%;
+	}
+}
+@media (max-width: 600px) {
+	.meat .middler {
+		width: 100%;
+	}
+	.meat .middler .text_side {
+		width: 100%;
+		height: 80%;
+		float: none;
+		text-align: center;
+	}
+	.meat .middler .text_side ul li {
+		text-align: left;
+	}
+	.meat .middler .pic_side {
+		width: 100%;
+	}
+}
+// Footer--------------------------
+.footer {
+	width: 100%;
+	height: 50vh;
+	background-color: $color4;
+	overflow: hidden;
+
+	.middler {
+		width: 1040px;
+		height: 100%;
+		margin: 0 auto;
+
+		.one, .two, .three, .four {
+			width: 25%;
+			float: left;
+			height: 100%;
+			margin-top: 5%;
+			text-align: center;
+
+			h5 {
+				text-align: center;
+			}
+			h6 {
+				text-align: center;
+			}
+			p {
+				padding: 0px 20px;
+				text-align: justify;
+			}
+			ul li {
+				text-align: left;
+			}
+		}
+	}
+}
+@media (max-width: 1040px) and (min-width: 600.000000001px) {
+	.footer .middler {
+		width: 100vw;
+	}
+}
+@media (max-width: 600px) {
+	.footer {
+		height: auto;
+	}
+	.footer .middler {
+		width: 100%;
+	}
+	.footer .middler .one {
+		width: 100%;
+	}
+	.footer .middler .two {
+		width: 100%;
+	}
+	.footer .middler .three {
+		width: 100%;
+	}
+	.footer .middler .four {
+		width: 100%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
